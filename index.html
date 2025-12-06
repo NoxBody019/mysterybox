@@ -1092,7 +1092,7 @@
     <div id="auth-screen" class="auth-container">
         <div class="auth-box">
             <div class="auth-header">
-                <h1>💎 Diamond Case</h1>
+                <h1>💎 The Royal Casino 💎</h1>
                 <p style="color: #94a3b8;">Gagne des cartes cadeaux en ouvrant des caisses !</p>
             </div>
 
@@ -1141,7 +1141,7 @@
     <div id="app-container" class="hidden">
         
         <header>
-            <div class="logo">💎 DiamondCase</div>
+            <div class="logo">💎 The Royal Casino 💎</div>
             <nav>
                 <button onclick="app.nav('cases')" class="active">Caisses</button>
                 <button onclick="app.nav('mines')" style="animation: neonGlow 2s ease-in-out infinite; color: #00ffff;">⚡ Mines</button>
@@ -1605,7 +1605,7 @@
                 ];
 // === BOTS MARKET AUTO ===
 setInterval(() => {
-    const botNames = ["Bot_Ares", "Bot_Nyx", "Bot_Kappa", "Bot_Zero"];
+    const botNames = ["Ares", "Nyx", "Kappa", "Zero"];
 
     const randomBot = botNames[Math.floor(Math.random() * botNames.length)];
     const rarityList = ["common", "rare", "epic", "legendary"];
@@ -1814,7 +1814,7 @@ setInterval(() => {
                 if (type === 'legendary') pool = [...ITEMS_DB.epic, ...ITEMS_DB.legendary, ...ITEMS_DB.legendary, ...ITEMS_DB.mythic];
                 if (type === 'mythic') pool = [...ITEMS_DB.legendary, ...ITEMS_DB.mythic, ...ITEMS_DB.mythic];
                 if (type === 'ultrapremium') {
-                    const chanceDeLaVie = Math.random() * 1000;
+                    const chanceDeLaVie = Math.random() * 100;
                     if (chanceDeLaVie < 1) {
                         pool = [ITEMS_DB.ultrapremium[0]];
                     } else {
