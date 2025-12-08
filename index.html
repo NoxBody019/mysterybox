@@ -1137,297 +1137,6 @@
 
         /* small helper */
         .muted { color: #94a3b8; font-size: 0.95rem; }
-
-        /* ROULETTE STYLES */
-        .roulette-container {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .roulette-game {
-            background: var(--bg-panel);
-            border-radius: 12px;
-            padding: 30px;
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .roulette-wheel-wrapper {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 0 auto 40px;
-        }
-
-        .roulette-wheel {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 0;
-            border: 8px solid var(--gold);
-            overflow: hidden;
-            box-shadow: 0 0 30px rgba(251, 191, 36, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .roulette-segment {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            font-weight: bold;
-            cursor: default;
-            transition: transform 0.1s;
-            border: 2px solid rgba(0, 0, 0, 0.3);
-        }
-
-        .roulette-segment.red {
-            background: #f87171;
-            color: white;
-        }
-
-        .roulette-segment.black {
-            background: #1f2937;
-            color: white;
-        }
-
-        .roulette-segment.gold {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: #0f172a;
-        }
-
-        .roulette-wheel.spinning .roulette-segment {
-            animation: wheelSpin 0.05s linear;
-        }
-
-        @keyframes wheelSpin {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        .roulette-pointer {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-top: 20px solid var(--gold);
-            z-index: 10;
-            filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
-        }
-
-        .roulette-betting {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .bet-section {
-            margin-bottom: 25px;
-        }
-
-        .bet-section label {
-            display: block;
-            color: #cbd5e1;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .bet-input-group {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        #roulette-bet {
-            flex: 1;
-            min-width: 100px;
-            padding: 10px;
-            background: rgba(15, 23, 42, 0.8);
-            border: 2px solid #334155;
-            color: white;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        #roulette-bet:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .bet-presets {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .bet-presets button {
-            padding: 10px 12px;
-            background: rgba(56, 189, 248, 0.2);
-            border: 1px solid var(--primary);
-            color: var(--primary);
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-
-        .bet-presets button:hover {
-            background: rgba(56, 189, 248, 0.3);
-            transform: scale(1.05);
-        }
-
-        .color-buttons {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .color-btn {
-            padding: 20px;
-            border: 3px solid;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.95rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .color-btn.red {
-            background: rgba(248, 113, 113, 0.2);
-            border-color: #f87171;
-            color: #f87171;
-        }
-
-        .color-btn.red:hover {
-            background: rgba(248, 113, 113, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(248, 113, 113, 0.4);
-        }
-
-        .color-btn.black {
-            background: rgba(31, 41, 55, 0.4);
-            border-color: #6b7280;
-            color: #d1d5db;
-        }
-
-        .color-btn.black:hover {
-            background: rgba(31, 41, 55, 0.6);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(107, 114, 128, 0.4);
-        }
-
-        .color-btn.gold {
-            background: rgba(251, 191, 36, 0.2);
-            border-color: #fbbf24;
-            color: #fbbf24;
-        }
-
-        .color-btn.gold:hover {
-            background: rgba(251, 191, 36, 0.3);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(251, 191, 36, 0.4);
-        }
-
-        .color-btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .roulette-message {
-            text-align: center;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            font-weight: bold;
-            min-height: 40px;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            animation: messageSlide 0.3s ease;
-        }
-
-        .roulette-message.active {
-            display: flex;
-        }
-
-        .roulette-message.success {
-            background: rgba(74, 222, 128, 0.1);
-            border: 2px solid var(--success);
-            color: var(--success);
-            font-size: 1.2rem;
-        }
-
-        .roulette-message.danger {
-            background: rgba(248, 113, 113, 0.1);
-            border: 2px solid var(--danger);
-            color: var(--danger);
-            font-size: 1.2rem;
-        }
-
-        .roulette-stats {
-            background: var(--bg-panel);
-            padding: 20px;
-            border-radius: 10px;
-            border: 2px solid var(--accent);
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-        }
-
-        .roulette-stats .stat-item {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .roulette-stats .stat-label {
-            color: #94a3b8;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-
-        .roulette-stats .stat-value {
-            color: var(--primary);
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-
-        @media (max-width: 600px) {
-            .color-buttons {
-                grid-template-columns: 1fr;
-            }
-
-            .roulette-wheel-wrapper {
-                width: 200px;
-                height: 200px;
-                margin-bottom: 30px;
-            }
-
-            .roulette-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .roulette-game {
-                padding: 15px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -1491,7 +1200,8 @@
                 <button onclick="app.nav('mines')">⚡ Mines</button>
                 <button onclick="app.nav('blackjack')">🎴 Blackjack</button>
                 <button onclick="app.nav('slots')">🎰 Slots</button>
-                <button onclick="app.nav('roulette')">🎡 Roulette</button>
+                <button onclick="app.nav('inventory')">Inventaire</button>
+                <button onclick="app.nav('market')">Marché</button>
                 <button onclick="app.nav('shop')">💎 Shop</button>
                 <button onclick="app.nav('redeem')" style="color:var(--gold)">🎁 Cadeaux</button>
                 <button onclick="app.showTutorial(true)" style="color:#94a3b8">📘 Tutoriel</button>
@@ -1805,79 +1515,18 @@
                 </div>
             </div>
 
-            <!-- SECTION ROULETTE -->
-            <div id="sec-roulette" class="section">
-                <h2>🎡 Roulette</h2>
-                
-                <div class="roulette-container">
-                    <div class="roulette-game">
-                        <!-- Wheel -->
-                        <div class="roulette-wheel-wrapper">
-                            <div class="roulette-wheel" id="roulette-wheel">
-                                <div class="roulette-segment red">🔴</div>
-                                <div class="roulette-segment black">⚫</div>
-                                <div class="roulette-segment gold">⭐</div>
-                                <div class="roulette-segment red">🔴</div>
-                                <div class="roulette-segment black">⚫</div>
-                                <div class="roulette-segment gold">⭐</div>
-                            </div>
-                            <div class="roulette-pointer"></div>
-                        </div>
+            <!-- SECTION INVENTAIRE -->
+            <div id="sec-inventory" class="section">
+                <h2>Mon Inventaire</h2>
+                <p style="color: #94a3b8; margin-bottom: 20px;">Vends tes objets rapidement ou mets-les sur le marché pour plus de profit !</p>
+                <div id="inventory-list" class="item-grid"></div>
+            </div>
 
-                        <!-- Bet Section -->
-                        <div class="roulette-betting">
-                            <div class="bet-section">
-                                <label>Mise 💎</label>
-                                <div class="bet-input-group">
-                                    <input type="number" id="roulette-bet" placeholder="Mise" min="1" value="10">
-                                    <div class="bet-presets">
-                                        <button onclick="app.setRouletteBet(10)">10💎</button>
-                                        <button onclick="app.setRouletteBet(25)">25💎</button>
-                                        <button onclick="app.setRouletteBet(50)">50💎</button>
-                                        <button onclick="app.setRouletteBet(100)">100💎</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="color-buttons">
-                                <button class="color-btn red" onclick="app.rouletteBet('red')">
-                                    <span style="font-size: 1.5rem;">🔴</span>
-                                    <span>ROUGE</span>
-                                    <span style="font-size: 0.8rem;">x2</span>
-                                </button>
-                                <button class="color-btn black" onclick="app.rouletteBet('black')">
-                                    <span style="font-size: 1.5rem;">⚫</span>
-                                    <span>NOIR</span>
-                                    <span style="font-size: 0.8rem;">x2</span>
-                                </button>
-                                <button class="color-btn gold" onclick="app.rouletteBet('gold')">
-                                    <span style="font-size: 1.5rem;">⭐</span>
-                                    <span>OR</span>
-                                    <span style="font-size: 0.8rem;">x14</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Result -->
-                        <div id="roulette-message" class="roulette-message"></div>
-
-                        <!-- Stats -->
-                        <div class="roulette-stats">
-                            <div class="stat-item">
-                                <span class="stat-label">Balance:</span>
-                                <span class="stat-value" id="roulette-balance">0</span> 💎
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-label">Mise Actuelle:</span>
-                                <span class="stat-value" id="roulette-bet-amount">0</span> 💎
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-label">Couleur:</span>
-                                <span class="stat-value" id="roulette-color-selected">-</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- SECTION MARCHÉ -->
+            <div id="sec-market" class="section">
+                <h2>Marché des Joueurs</h2>
+                <p style="color: #94a3b8; margin-bottom: 20px;">Achète les objets des autres joueurs à prix négocié !</p>
+                <div id="market-list" class="item-grid"></div>
             </div>
 
             <!-- SECTION SHOP DIAMANTS -->
@@ -1958,38 +1607,6 @@
                         <div class="diamond-price">4999.99€</div>
                         <p style="color: #94a3b8; margin-bottom: 15px;">Le pack ultime — très rare, énorme bonus</p>
                         <button class="btn-main" onclick="app.selectPackage({ id:'mega-ultra', amount:5000000, price:4999.99, title:'MEGA ULTRA', bonus:'Bonus légendaire + items uniques'})">Acheter</button>
-                    </div>
-
-                    <div class="diamond-package" style="border-color: #ff00ff;">
-                        <h3>INFINITY PACK</h3>
-                        <div class="diamond-amount">💎 10,000,000</div>
-                        <div class="diamond-price">9999.99€</div>
-                        <p style="color: #94a3b8; margin-bottom: 15px;">L'infini commence ici</p>
-                        <button class="btn-main" onclick="app.selectPackage({ id:'infinity-10m', amount:10000000, price:9999.99, title:'INFINITY PACK', bonus:'Accès illimité aux drops'})">Acheter</button>
-                    </div>
-
-                    <div class="diamond-package featured" style="border-color: #ff00ff; box-shadow: 0 0 40px rgba(255, 0, 255, 0.5);">
-                        <h3>GODLIKE COLLECTION</h3>
-                        <div class="diamond-amount">💎 20,000,000</div>
-                        <div class="diamond-price">14999.99€</div>
-                        <p style="color: #94a3b8; margin-bottom: 15px;">Seulement pour les vrais dieux du jeu</p>
-                        <button class="btn-main" onclick="app.selectPackage({ id:'godlike-20m', amount:20000000, price:14999.99, title:'GODLIKE COLLECTION', bonus:'VIP status + double XP'})">Acheter</button>
-                    </div>
-
-                    <div class="diamond-package" style="border-color: #ff6b6b;">
-                        <h3>DRAGON'S HOARD</h3>
-                        <div class="diamond-amount">💎 50,000,000</div>
-                        <div class="diamond-price">29999.99€</div>
-                        <p style="color: #94a3b8; margin-bottom: 15px;">Le trésor du dragon ancien</p>
-                        <button class="btn-main" onclick="app.selectPackage({ id:'dragon-50m', amount:50000000, price:29999.99, title:'DRAGON HOARD', bonus:'Items de légende garantis'})">Acheter</button>
-                    </div>
-
-                    <div class="diamond-package" style="border-color: #ff00ff; box-shadow: 0 0 50px rgba(255, 0, 255, 0.8);">
-                        <h3>COSMIQUE SUPRÊME</h3>
-                        <div class="diamond-amount">💎 100,000,000</div>
-                        <div class="diamond-price">49999.99€</div>
-                        <p style="color: #94a3b8; margin-bottom: 15px;">Au-delà des limites du temps et de l'espace</p>
-                        <button class="btn-main" onclick="app.selectPackage({ id:'cosmic-100m', amount:100000000, price:49999.99, title:'COSMIQUE SUPRÊME', bonus:'Items mythiques x5 garantis'})">Acheter</button>
                     </div>
                 </div>
             </div>
@@ -2653,10 +2270,6 @@
                 
                 if (screen === 'slots') {
                     this.updateSlotsUI();
-                }
-                
-                if (screen === 'roulette') {
-                    this.updateRouletteUI();
                 }
             },
 
@@ -3613,110 +3226,6 @@
                 this.slotsMachineState.lastWin = winAmount;
                 this.saveUser();
                 this.updateSlotsUI();
-            },
-
-            // -----------------------
-            // ROULETTE
-            // -----------------------
-            rouletteState: {
-                spinning: false,
-                currentBet: 10,
-                selectedColor: null
-            },
-
-            setRouletteBet: function(amount) {
-                this.rouletteState.currentBet = amount;
-                document.getElementById('roulette-bet').value = amount;
-                this.updateRouletteUI();
-            },
-
-            rouletteBet: function(color) {
-                if (this.rouletteState.spinning) {
-                    this.notify('La roue tourne, attends la fin!', 'error');
-                    return;
-                }
-
-                const bet = parseInt(document.getElementById('roulette-bet').value) || 10;
-                
-                if (this.user.diamonds < bet) {
-                    this.notify(`Tu n'as pas assez de diamants! (besoin: ${bet}, tu as: ${this.user.diamonds})`, 'error');
-                    return;
-                }
-
-                this.rouletteState.selectedColor = color;
-                this.rouletteState.currentBet = bet;
-                this.user.diamonds -= bet;
-                
-                this.updateRouletteUI();
-                this.spinRoulette();
-            },
-
-            spinRoulette: function() {
-                if (this.rouletteState.spinning) return;
-                
-                this.rouletteState.spinning = true;
-                const wheel = document.getElementById('roulette-wheel');
-                const messageBox = document.getElementById('roulette-message');
-                messageBox.classList.remove('active', 'success', 'danger');
-                
-                wheel.classList.add('spinning');
-                
-                const spins = 8 + Math.random() * 4;
-                const randomRotation = Math.random() * 360;
-                const totalRotation = (spins * 360) + randomRotation;
-                
-                wheel.style.transform = `rotate(${totalRotation}deg)`;
-                
-                setTimeout(() => {
-                    wheel.classList.remove('spinning');
-                    
-                    const normalizedRotation = randomRotation % 360;
-                    let result = this.getRouletteResult(normalizedRotation);
-                    
-                    const isWin = result === this.rouletteState.selectedColor;
-                    let winAmount = 0;
-                    
-                    if (isWin) {
-                        if (result === 'gold') {
-                            winAmount = this.rouletteState.currentBet * 14;
-                        } else {
-                            winAmount = this.rouletteState.currentBet * 2;
-                        }
-                        
-                        this.user.diamonds += winAmount + this.rouletteState.currentBet;
-                        messageBox.innerHTML = `🎉 GAGNÉ! +${winAmount} 💎`;
-                        messageBox.classList.add('active', 'success');
-                        this.notify(`Vous avez gagné ${winAmount} 💎!`, 'success');
-                    } else {
-                        messageBox.innerHTML = `😢 Perdu! La roue a montré ${this.getColorEmoji(result)}`;
-                        messageBox.classList.add('active', 'danger');
-                        this.notify('Vous avez perdu cette mise...', 'error');
-                    }
-                    
-                    this.rouletteState.spinning = false;
-                    this.saveUser();
-                    this.updateRouletteUI();
-                }, 3000);
-            },
-
-            getRouletteResult: function(rotation) {
-                const segments = ['red', 'black', 'gold', 'red', 'black', 'gold'];
-                const segmentAngle = 360 / segments.length;
-                const index = Math.floor(rotation / segmentAngle);
-                return segments[index];
-            },
-
-            getColorEmoji: function(color) {
-                const emojis = { red: '🔴', black: '⚫', gold: '⭐' };
-                return emojis[color] || '?';
-            },
-
-            updateRouletteUI: function() {
-                if (!this.user) return;
-                document.getElementById('roulette-balance').innerText = this.user.diamonds.toLocaleString();
-                document.getElementById('roulette-bet-amount').innerText = this.rouletteState.currentBet;
-                document.getElementById('roulette-color-selected').innerText = this.rouletteState.selectedColor ? 
-                    `${this.getColorEmoji(this.rouletteState.selectedColor)} ${this.rouletteState.selectedColor.toUpperCase()}` : '-';
             }
         };
 
