@@ -4314,7 +4314,7 @@
             towerState: {
                 mode: 'easy',
                 columns: 3,
-                floors: 30,
+                floors: 8,
                 currentFloor: 0,
                 bet: 0,
                 multiplier: 1,
@@ -4330,7 +4330,7 @@
                 
                 this.towerState.mode = mode;
                 this.towerState.columns = mode === 'easy' ? 3 : 2;
-                this.towerState.floors = 30;
+                this.towerState.floors = 8;
                 
                 // Update UI
                 document.querySelectorAll('.tower-mode-btn').forEach(btn => btn.classList.remove('active'));
@@ -4378,7 +4378,7 @@
 
             calculateTowerMultiplier: function(floor) {
                 const mode = this.towerState.mode;
-                const base = mode === 'easy' ? 1.05 : 1.15;
+                const base = mode === 'easy' ? 1.15 : 1.50;
                 return Math.pow(base, floor);
             },
 
