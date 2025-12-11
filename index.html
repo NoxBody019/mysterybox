@@ -2197,93 +2197,210 @@
 
             <!-- SECTION SLOTS -->
             <div id="sec-slots" class="section">
-                <h2>🎰 Machine à Sous - Jackpot Géant</h2>
+                <h2>🎰 Machines à Sous</h2>
                 
+                <!-- MACHINE 1: FRUITS -->
                 <div class="slots-container">
                     <div class="slots-machine">
-                        <!-- Slots Display -->
                         <div class="slots-display">
                             <div class="slots-header">
-                                <h3>⭐ Votre Chance d'Aujourd'hui ⭐</h3>
+                                <h3>🍎 Machine Fruits 🍒</h3>
                             </div>
-                            <div class="slots-grid" id="slots-grid">
+                            <div class="slots-grid" id="slots-grid-fruits">
                                 <div class="slot-reel">
-                                    <div class="reel-container" id="reel-0">
-                                        <div class="reel-item">🍎</div>
-                                        <div class="reel-item">🍊</div>
-                                        <div class="reel-item">🍋</div>
-                                        <div class="reel-item">🍒</div>
-                                        <div class="reel-item">💎</div>
-                                        <div class="reel-item">👑</div>
-                                        <div class="reel-item">🎰</div>
-                                        <div class="reel-item">⭐</div>
-                                    </div>
+                                    <div class="reel-container" id="reel-fruits-0"></div>
                                     <div class="reel-window"></div>
                                 </div>
                                 <div class="slot-reel">
-                                    <div class="reel-container" id="reel-1">
-                                        <div class="reel-item">🍎</div>
-                                        <div class="reel-item">🍊</div>
-                                        <div class="reel-item">🍋</div>
-                                        <div class="reel-item">🍒</div>
-                                        <div class="reel-item">💎</div>
-                                        <div class="reel-item">👑</div>
-                                        <div class="reel-item">🎰</div>
-                                        <div class="reel-item">⭐</div>
-                                    </div>
+                                    <div class="reel-container" id="reel-fruits-1"></div>
                                     <div class="reel-window"></div>
                                 </div>
                                 <div class="slot-reel">
-                                    <div class="reel-container" id="reel-2">
-                                        <div class="reel-item">🍎</div>
-                                        <div class="reel-item">🍊</div>
-                                        <div class="reel-item">🍋</div>
-                                        <div class="reel-item">🍒</div>
-                                        <div class="reel-item">💎</div>
-                                        <div class="reel-item">👑</div>
-                                        <div class="reel-item">🎰</div>
-                                        <div class="reel-item">⭐</div>
-                                    </div>
+                                    <div class="reel-container" id="reel-fruits-2"></div>
                                     <div class="reel-window"></div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Winline -->
                         <div class="winline"></div>
-
-                        <!-- Win Message -->
-                        <div id="slots-message" class="slots-message"></div>
-
-                        <!-- Controls -->
+                        <div id="slots-message-fruits" class="slots-message"></div>
                         <div class="slots-controls">
                             <div class="bet-section">
-                                <label>💎 Mise (par Ligne)</label>
+                                <label>💎 Mise</label>
                                 <div class="bet-input-group">
-                                    <input type="number" id="slots-bet" placeholder="Mise" min="1" value="10">
+                                    <input type="number" id="slots-bet-fruits" placeholder="Mise" min="1" value="10">
                                     <div class="bet-presets">
-                                        <button onclick="app.setSlotsBet(10)">10💎</button>
-                                        <button onclick="app.setSlotsBet(25)">25💎</button>
-                                        <button onclick="app.setSlotsBet(50)">50💎</button>
-                                        <button onclick="app.setSlotsBet(100)">100💎</button>
+                                        <button onclick="app.setSlotsBet('fruits', 10)">10💎</button>
+                                        <button onclick="app.setSlotsBet('fruits', 25)">25💎</button>
+                                        <button onclick="app.setSlotsBet('fruits', 50)">50💎</button>
+                                        <button onclick="app.setSlotsBet('fruits', 100)">100💎</button>
                                     </div>
                                 </div>
                             </div>
-
-                            <button id="slots-spin" class="btn-spin" onclick="app.slotsSpin()">🎰 TOURNEZ LES ROUES 🎰</button>
-
+                            <button id="slots-spin-fruits" class="btn-spin" onclick="app.slotsSpin('fruits')">SPIN 🍎</button>
                             <div class="slots-stats">
                                 <div class="stat-item">
                                     <span class="stat-label">💎 Solde</span>
-                                    <span class="stat-value" id="slots-balance">0</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-label">🎯 Mise Totale</span>
-                                    <span class="stat-value" id="slots-total-bet">0</span>
+                                    <span class="stat-value" id="slots-balance-fruits">0</span>
                                 </div>
                                 <div class="stat-item">
                                     <span class="stat-label">🏆 Dernier Gain</span>
-                                    <span class="stat-value" id="slots-last-win">0</span>
+                                    <span class="stat-value" id="slots-last-win-fruits">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MACHINE 2: TRÉSOR -->
+                <div class="slots-container">
+                    <div class="slots-machine">
+                        <div class="slots-display">
+                            <div class="slots-header">
+                                <h3>💰 Machine Trésor 👑</h3>
+                            </div>
+                            <div class="slots-grid" id="slots-grid-treasure">
+                                <div class="slot-reel">
+                                    <div class="reel-container" id="reel-treasure-0"></div>
+                                    <div class="reel-window"></div>
+                                </div>
+                                <div class="slot-reel">
+                                    <div class="reel-container" id="reel-treasure-1"></div>
+                                    <div class="reel-window"></div>
+                                </div>
+                                <div class="slot-reel">
+                                    <div class="reel-container" id="reel-treasure-2"></div>
+                                    <div class="reel-window"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="winline"></div>
+                        <div id="slots-message-treasure" class="slots-message"></div>
+                        <div class="slots-controls">
+                            <div class="bet-section">
+                                <label>💎 Mise</label>
+                                <div class="bet-input-group">
+                                    <input type="number" id="slots-bet-treasure" placeholder="Mise" min="1" value="10">
+                                    <div class="bet-presets">
+                                        <button onclick="app.setSlotsBet('treasure', 10)">10💎</button>
+                                        <button onclick="app.setSlotsBet('treasure', 25)">25💎</button>
+                                        <button onclick="app.setSlotsBet('treasure', 50)">50💎</button>
+                                        <button onclick="app.setSlotsBet('treasure', 100)">100💎</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="slots-spin-treasure" class="btn-spin" onclick="app.slotsSpin('treasure')">SPIN 💰</button>
+                            <div class="slots-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">💎 Solde</span>
+                                    <span class="stat-value" id="slots-balance-treasure">0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">🏆 Dernier Gain</span>
+                                    <span class="stat-value" id="slots-last-win-treasure">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MACHINE 3: CASINO -->
+                <div class="slots-container">
+                    <div class="slots-machine">
+                        <div class="slots-display">
+                            <div class="slots-header">
+                                <h3>🎲 Machine Casino 🃏</h3>
+                            </div>
+                            <div class="slots-grid" id="slots-grid-casino">
+                                <div class="slot-reel">
+                                    <div class="reel-container" id="reel-casino-0"></div>
+                                    <div class="reel-window"></div>
+                                </div>
+                                <div class="slot-reel">
+                                    <div class="reel-container" id="reel-casino-1"></div>
+                                    <div class="reel-window"></div>
+                                </div>
+                                <div class="slot-reel">
+                                    <div class="reel-container" id="reel-casino-2"></div>
+                                    <div class="reel-window"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="winline"></div>
+                        <div id="slots-message-casino" class="slots-message"></div>
+                        <div class="slots-controls">
+                            <div class="bet-section">
+                                <label>💎 Mise</label>
+                                <div class="bet-input-group">
+                                    <input type="number" id="slots-bet-casino" placeholder="Mise" min="1" value="10">
+                                    <div class="bet-presets">
+                                        <button onclick="app.setSlotsBet('casino', 10)">10💎</button>
+                                        <button onclick="app.setSlotsBet('casino', 25)">25💎</button>
+                                        <button onclick="app.setSlotsBet('casino', 50)">50💎</button>
+                                        <button onclick="app.setSlotsBet('casino', 100)">100💎</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="slots-spin-casino" class="btn-spin" onclick="app.slotsSpin('casino')">SPIN 🎰</button>
+                            <div class="slots-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">💎 Solde</span>
+                                    <span class="stat-value" id="slots-balance-casino">0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">🏆 Dernier Gain</span>
+                                    <span class="stat-value" id="slots-last-win-casino">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MACHINE 4: ANIMAUX -->
+                <div class="slots-container">
+                    <div class="slots-machine">
+                        <div class="slots-display">
+                            <div class="slots-header">
+                                <h3>🐶 Machine Animaux 🦁</h3>
+                            </div>
+                            <div class="slots-grid" id="slots-grid-animals">
+                                <div class="slot-reel">
+                                    <div class="reel-container" id="reel-animals-0"></div>
+                                    <div class="reel-window"></div>
+                                </div>
+                                <div class="slot-reel">
+                                    <div class="reel-container" id="reel-animals-1"></div>
+                                    <div class="reel-window"></div>
+                                </div>
+                                <div class="slot-reel">
+                                    <div class="reel-container" id="reel-animals-2"></div>
+                                    <div class="reel-window"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="winline"></div>
+                        <div id="slots-message-animals" class="slots-message"></div>
+                        <div class="slots-controls">
+                            <div class="bet-section">
+                                <label>💎 Mise</label>
+                                <div class="bet-input-group">
+                                    <input type="number" id="slots-bet-animals" placeholder="Mise" min="1" value="10">
+                                    <div class="bet-presets">
+                                        <button onclick="app.setSlotsBet('animals', 10)">10💎</button>
+                                        <button onclick="app.setSlotsBet('animals', 25)">25💎</button>
+                                        <button onclick="app.setSlotsBet('animals', 50)">50💎</button>
+                                        <button onclick="app.setSlotsBet('animals', 100)">100💎</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="slots-spin-animals" class="btn-spin" onclick="app.slotsSpin('animals')">SPIN 🦁</button>
+                            <div class="slots-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">💎 Solde</span>
+                                    <span class="stat-value" id="slots-balance-animals">0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">🏆 Dernier Gain</span>
+                                    <span class="stat-value" id="slots-last-win-animals">0</span>
                                 </div>
                             </div>
                         </div>
@@ -2392,7 +2509,7 @@
                 <h2>🏰 Ascension de la Tour Infinie</h2>
                 
                 <div class="tower-mode-selector">
-                    <button class="tower-mode-btn active" onclick="app.selectTowerMode('easy')">🟢 Mode Facile (3 Colonnes)</button>
+                    <button class="tower-mode-btn active" onclick="app.selectTowerMode('easy')">🟢 Mode Facile (3 Colonnes, 2 Bonnes)</button>
                     <button class="tower-mode-btn" onclick="app.selectTowerMode('hard')">🔴 Mode Difficile (2 Colonnes)</button>
                 </div>
 
@@ -3106,7 +3223,10 @@
                 }
                 
                 if (screen === 'slots') {
-                    this.updateSlotsUI();
+                    this.initAllSlots();
+                    ['fruits', 'treasure', 'casino', 'animals'].forEach(machine => {
+                        this.updateSlotsUI(machine);
+                    });
                 }
             },
 
@@ -3958,28 +4078,65 @@
                 this.updateBJUI();
             },
 
-            slotsMachineState: {
-                isSpinning: false,
-                lastWin: 0,
-                totalBets: 0
+            initAllSlots: function() {
+                const machines = ['fruits', 'treasure', 'casino', 'animals'];
+                machines.forEach(machine => {
+                    const symbols = this.slotsMachines[machine].symbols;
+                    for (let i = 0; i < 3; i++) {
+                        const reel = document.getElementById(`reel-${machine}-${i}`);
+                        if (reel && reel.children.length === 0) {
+                            symbols.forEach(symbol => {
+                                const item = document.createElement('div');
+                                item.className = 'reel-item';
+                                item.textContent = symbol;
+                                reel.appendChild(item);
+                            });
+                        }
+                    }
+                });
             },
 
-            setSlotsBet: function(amount) {
-                document.getElementById('slots-bet').value = amount;
-                this.updateSlotsUI();
+            slotsMachines: {
+                fruits: {
+                    isSpinning: false,
+                    lastWin: 0,
+                    symbols: ['🍎', '🍊', '🍋', '🍒', '💎', '👑', '🎰'],
+                    multipliers: { '🍎': 2, '🍊': 2, '🍋': 3, '🍒': 3, '💎': 5, '👑': 10, '🎰': 50 }
+                },
+                treasure: {
+                    isSpinning: false,
+                    lastWin: 0,
+                    symbols: ['💰', '💵', '💴', '💶', '💎', '👑', '🏆'],
+                    multipliers: { '💰': 2, '💵': 2, '💴': 3, '💶': 3, '💎': 5, '👑': 10, '🏆': 50 }
+                },
+                casino: {
+                    isSpinning: false,
+                    lastWin: 0,
+                    symbols: ['🎰', '🎲', '🃏', '♠️', '♥️', '👑', '⭐'],
+                    multipliers: { '🎰': 2, '🎲': 2, '🃏': 3, '♠️': 3, '♥️': 5, '👑': 10, '⭐': 50 }
+                },
+                animals: {
+                    isSpinning: false,
+                    lastWin: 0,
+                    symbols: ['🐶', '🐱', '🦁', '🐯', '🦅', '🐉', '🦄'],
+                    multipliers: { '🐶': 2, '🐱': 2, '🦁': 3, '🐯': 3, '🦅': 5, '🐉': 10, '🦄': 50 }
+                }
             },
 
-            updateSlotsUI: function() {
-                document.getElementById('slots-balance').innerText = this.user.diamonds;
-                const bet = parseInt(document.getElementById('slots-bet').value) || 0;
-                document.getElementById('slots-total-bet').innerText = bet * 3;
-                document.getElementById('slots-last-win').innerText = this.slotsMachineState.lastWin;
+            setSlotsBet: function(machine, amount) {
+                document.getElementById(`slots-bet-${machine}`).value = amount;
+                this.updateSlotsUI(machine);
             },
 
-            slotsSpin: function() {
-                if (this.slotsMachineState.isSpinning) return;
+            updateSlotsUI: function(machine) {
+                document.getElementById(`slots-balance-${machine}`).innerText = this.user.diamonds;
+                document.getElementById(`slots-last-win-${machine}`).innerText = this.slotsMachines[machine].lastWin;
+            },
+
+            slotsSpin: function(machine) {
+                if (this.slotsMachines[machine].isSpinning) return;
                 
-                const betInput = document.getElementById('slots-bet');
+                const betInput = document.getElementById(`slots-bet-${machine}`);
                 const bet = parseInt(betInput.value);
                 
                 if (!bet || bet <= 0) {
@@ -3994,33 +4151,32 @@
                 }
                 
                 this.user.diamonds -= totalBet;
-                this.slotsMachineState.totalBets = totalBet;
-                this.slotsMachineState.isSpinning = true;
+                this.slotsMachines[machine].isSpinning = true;
                 
-                document.getElementById('slots-spin').disabled = true;
-                document.getElementById('slots-message').innerHTML = '';
+                document.getElementById(`slots-spin-${machine}`).disabled = true;
+                document.getElementById(`slots-message-${machine}`).innerHTML = '';
                 
                 const reels = [0, 1, 2];
-                const symbols = ['🍎', '🍊', '🍋', '🍒', '💎', '👑', '🎰'];
+                const symbols = this.slotsMachines[machine].symbols;
                 const results = reels.map(() => symbols[Math.floor(Math.random() * symbols.length)]);
                 
                 reels.forEach((reel, index) => {
                     const duration = 2000 + (index * 200);
                     setTimeout(() => {
-                        this.spinReel(reel, results[index], duration);
+                        this.spinReel(machine, reel, results[index], duration);
                     }, index * 150);
                 });
                 
                 setTimeout(() => {
-                    this.checkSlotsWin(results, bet);
-                    document.getElementById('slots-spin').disabled = false;
-                    this.slotsMachineState.isSpinning = false;
+                    this.checkSlotsWin(machine, results, bet);
+                    document.getElementById(`slots-spin-${machine}`).disabled = false;
+                    this.slotsMachines[machine].isSpinning = false;
                 }, 3000);
             },
 
-            spinReel: function(reelIndex, targetSymbol, duration) {
-                const reel = document.getElementById(`reel-${reelIndex}`);
-                const symbols = ['🍎', '🍊', '🍋', '🍒', '💎', '👑', '🎰'];
+            spinReel: function(machine, reelIndex, targetSymbol, duration) {
+                const reel = document.getElementById(`reel-${machine}-${reelIndex}`);
+                const symbols = this.slotsMachines[machine].symbols;
                 const targetIndex = symbols.indexOf(targetSymbol);
                 
                 let currentIndex = 0;
@@ -4028,49 +4184,51 @@
                 const spinsPerSecond = 10;
                 const totalSpins = Math.floor((duration / 1000) * spinsPerSecond);
                 
+                for (let i = 0; i < symbols.length; i++) {
+                    const item = document.createElement('div');
+                    item.className = 'reel-item';
+                    item.textContent = symbols[i];
+                    reel.appendChild(item);
+                }
+                
                 const spinInterval = setInterval(() => {
                     spins++;
                     currentIndex = (currentIndex + 1) % symbols.length;
-                    reel.style.transform = `translateY(-${currentIndex * 50}px)`;
+                    reel.style.transform = `translateY(-${currentIndex * 150}px)`;
                     
                     if (spins >= totalSpins) {
                         clearInterval(spinInterval);
-                        reel.style.transform = `translateY(-${targetIndex * 50}px)`;
+                        reel.style.transform = `translateY(-${targetIndex * 150}px)`;
                     }
                 }, 1000 / spinsPerSecond);
             },
 
-            checkSlotsWin: function(results, bet) {
+            checkSlotsWin: function(machine, results, bet) {
                 const [r1, r2, r3] = results;
                 let winAmount = 0;
-                const symbols = ['🍎', '🍊', '🍋', '🍒', '💎', '👑', '🎰'];
-                const multipliers = {
-                    '🍎': 2, '🍊': 2, '🍋': 3, '🍒': 3,
-                    '💎': 5, '👑': 10, '🎰': 50
-                };
-                
+                const machineData = this.slotsMachines[machine];
+                const multipliers = machineData.multipliers;
                 const totalBet = bet * 3;
                 
                 if (r1 === r2 && r2 === r3) {
                     winAmount = totalBet * multipliers[r1];
-                    document.getElementById('slots-message').innerHTML = `🎉 <strong>JACKPOT!</strong> ${r1}${r1}${r1} +${winAmount} 💎`;
+                    document.getElementById(`slots-message-${machine}`).innerHTML = `🎉 <strong>JACKPOT!</strong> ${r1}${r1}${r1} +${winAmount} 💎`;
                     this.notify(`JACKPOT! +${winAmount} 💎 !`, 'success');
                 } else if (r1 === r2 || r2 === r3 || r1 === r3) {
                     const pair = (r1 === r2) ? r1 : (r2 === r3) ? r2 : r1;
                     winAmount = totalBet * Math.floor(multipliers[pair] / 2);
-                    document.getElementById('slots-message').innerHTML = `🎊 Vous avez une paire! +${winAmount} 💎`;
+                    document.getElementById(`slots-message-${machine}`).innerHTML = `🎊 Vous avez une paire! +${winAmount} 💎`;
                     this.notify(`Paire gagnante! +${winAmount} 💎`, 'success');
                 } else {
-                    document.getElementById('slots-message').innerHTML = `😢 Pas gagnant cette fois... Réessayez!`;
+                    document.getElementById(`slots-message-${machine}`).innerHTML = `😢 Pas gagnant cette fois... Réessayez!`;
                     this.notify('Pas gagnant...', 'error');
                 }
                 
                 this.user.diamonds += winAmount;
-                this.slotsMachineState.lastWin = winAmount;
+                this.slotsMachines[machine].lastWin = winAmount;
                 this.saveUser();
-                this.updateSlotsUI();
-            
-        },
+                this.updateSlotsUI(machine);
+            },
 // --- LOGIQUE DES CAISSES ---
             
             getFreeCase: function() {
@@ -4337,7 +4495,7 @@
                 event.target.classList.add('active');
                 
                 const infoText = mode === 'easy' 
-                    ? '🟢 Mode Facile : 3 colonnes, 30 étages. Gagnez un multiplicateur à chaque étage. Plus sûr mais gains plus lents.'
+                    ? '🟢 Mode Facile : 3 colonnes (2 bonnes!), 30 étages. Gagnez un multiplicateur à chaque étage. Plus sûr mais gains plus lents.'
                     : '🔴 Mode Difficile : 2 colonnes, 30 étages. Gains BEAUCOUP plus rapides mais plus risqué !';
                 
                 document.getElementById('tower-mode-info').innerText = infoText;
@@ -4407,8 +4565,19 @@
                 this.towerState.correctPath = [];
                 
                 for (let i = 0; i < this.towerState.floors; i++) {
-                    const correctCol = Math.floor(Math.random() * this.towerState.columns);
-                    this.towerState.correctPath.push(correctCol);
+                    if (this.towerState.mode === 'easy') {
+                        const correctCols = [];
+                        const wrongCol = Math.floor(Math.random() * this.towerState.columns);
+                        for (let j = 0; j < this.towerState.columns; j++) {
+                            if (j !== wrongCol) {
+                                correctCols.push(j);
+                            }
+                        }
+                        this.towerState.correctPath.push(correctCols);
+                    } else {
+                        const correctCol = Math.floor(Math.random() * this.towerState.columns);
+                        this.towerState.correctPath.push([correctCol]);
+                    }
                 }
                 
                 this.renderTowerGame();
@@ -4430,8 +4599,8 @@
                 if (!this.towerState.gameActive) return;
                 if (floor !== this.towerState.currentFloor) return;
                 
-                const correctCol = this.towerState.correctPath[floor];
-                const isCorrect = col === correctCol;
+                const correctCols = this.towerState.correctPath[floor];
+                const isCorrect = correctCols.includes(col);
                 
                 const floorDiv = document.querySelector(`.tower-floor[data-floor="${floor}"][data-col="${col}"]`);
                 
@@ -4459,11 +4628,13 @@
                 } else {
                     floorDiv.classList.add('lost');
                     
-                    const correctFloor = document.querySelector(`.tower-floor[data-floor="${floor}"][data-col="${correctCol}"]`);
-                    if (correctFloor) {
-                        correctFloor.classList.add('completed');
-                        correctFloor.innerHTML += '<div style="position:absolute; top:5px; right:5px; font-size:1.5rem;">✓</div>';
-                    }
+                    correctCols.forEach(correctCol => {
+                        const correctFloor = document.querySelector(`.tower-floor[data-floor="${floor}"][data-col="${correctCol}"]`);
+                        if (correctFloor) {
+                            correctFloor.classList.add('completed');
+                            correctFloor.innerHTML += '<div style="position:absolute; top:5px; right:5px; font-size:1.5rem;">✓</div>';
+                        }
+                    });
                     
                     this.towerGameEnd(false, 'lose');
                 }
